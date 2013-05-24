@@ -1,7 +1,7 @@
 RNRippleTableView
 ===
 
-A highly detailed and realistic ripple effect for custom tables and menus.
+A custom table view with highly detailed ripple animations.
 
 ## Level of Detail ##
 
