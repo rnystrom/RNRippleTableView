@@ -5,11 +5,13 @@ A custom table view with highly detailed ripple animations.
 
 ## Level of Detail ##
 
-I created this control from a [post on Dribbble]() by [Boris SOMETHING]() out of pure curiosity. I really wanted to nail the shadow animations as well as a bounce effect that followed diminishing return rules on amplitude as well as plausible timing. Take a look at some screens and animations.
+I created this control from a [couple](http://dribbble.com/shots/1072843-Filp-Menu?list=users) [posts](http://dribbble.com/shots/1072843-Filp-Menu/attachments/132747) on [Dribbble](http://dribbble.com/) by [Boris Valusek](http://dribbble.com/BorisValusek) out of pure curiosity. I really wanted to nail the shadow animations as well as a bounce effect that followed diminishing return rules on amplitude as well as plausible timing. Take a look at some screens and animations.
 
-<p align="center"><img src=""/></p>
+<p align="center"><img src="https://raw.github.com/rnystrom/RNRippleTableView/master/images/animated.gif"/></p>
 
-To enable [Anti-Aliasing]() you'll need to set the <code>[UIViewEdgeAntialiasing](http://developer.apple.com/library/ios/#documentation/general/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html)</code> key to YES in your Info.plist.
+To enable [Anti-Aliasing](http://en.wikipedia.org/wiki/Spatial_anti-aliasing) you'll need to set the <code>[UIViewEdgeAntialiasing](http://developer.apple.com/library/ios/#documentation/general/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html)</code> key to YES in your Info.plist. Doing so will impact performance, but if you're an optimizer you'll end up with good performance and sweet, sweet line edges like this:
+
+<p align="center"><img src="https://raw.github.com/rnystrom/RNRippleTableView/master/images/still.png"/></p>
 
 ## Installation ##
 
@@ -79,9 +81,9 @@ Optionally you can animate small ripples on significant motion events with the d
 
 ## Acknowledgments
 
-I created a parent project called <code>[RNTableView]()</code> simply as a bear-minimum project for starting highly customized UITableView-esque classes. That project was entirely insprired by Mike Ash's [Let's Build UITableView]() blog post.
+I created a parent project called <code>[RNTableView](https://github.com/rnystrom/RNTableView)</code> simply as a bear-minimum project for starting highly customized UITableView-esque classes. That project was entirely insprired by Mike Ash's [Let's Build UITableView](http://www.mikeash.com/pyblog/friday-qa-2013-02-22-lets-build-uitableview.html) blog post.
 
-[Boris]() was the creator behind this idea on [Dribbble](). All credit for originality goes to him.
+[Boris Valusek](http://dribbble.com/BorisValusek) was the creator behind this idea on [Dribbble](http://dribbble.com/). All credit for originality goes to him.
 
 ## Contact
 
@@ -91,4 +93,4 @@ I created a parent project called <code>[RNTableView]()</code> simply as a bear-
 
 ## License
 
-See [LICENSE]().
+See [LICENSE](https://github.com/rnystrom/RNRippleTableView/blob/master/LICENSE).
