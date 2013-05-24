@@ -95,10 +95,6 @@
 		86799461174A9328008D1D4C /* RNRippleTableView */ = {
 			isa = PBXGroup;
 			children = (
-				863838B5174E7EC2007DB88D /* RNAppDelegate.h */,
-				863838B6174E7EC2007DB88D /* RNAppDelegate.m */,
-				863838B7174E7EC2007DB88D /* RNRippleTableView-Info.plist */,
-				863838B8174E7EC2007DB88D /* RNRippleTableView-Prefix.pch */,
 				863838B9174E7EC2007DB88D /* RNSampleCell.h */,
 				863838BA174E7EC2007DB88D /* RNSampleCell.m */,
 				863838BB174E7EC2007DB88D /* RNViewController.h */,
@@ -112,6 +108,10 @@
 		86799462174A9328008D1D4C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				863838B5174E7EC2007DB88D /* RNAppDelegate.h */,
+				863838B6174E7EC2007DB88D /* RNAppDelegate.m */,
+				863838B7174E7EC2007DB88D /* RNRippleTableView-Info.plist */,
+				863838B8174E7EC2007DB88D /* RNRippleTableView-Prefix.pch */,
 				863838C9174E7EE0007DB88D /* InfoPlist.strings */,
 				863838CB174E7EE0007DB88D /* MainStoryboard.storyboard */,
 				863838C1174E7ED9007DB88D /* Default-568h@2x.png */,

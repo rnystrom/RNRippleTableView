@@ -23,24 +23,28 @@
 @end
 
 @interface RNRippleTableView : UIScrollView
+
 @property (nonatomic, weak) id <RNRippleTableViewDataSource> dataSource;
 @property (nonatomic, weak) id <RNRippleTableViewDelegate> delegate;
 
-@property (nonatomic, assign) BOOL isAnchoredLeft;
-@property (nonatomic, assign) NSInteger rippleOffset;
-@property (nonatomic, assign) CGFloat rippleAmplitude;
-@property (nonatomic, assign) CGFloat rippleDuration;
-@property (nonatomic, assign) BOOL ripplesOnAccelerometer;
+@property (nonatomic, assign) BOOL isAnchoredLeft;          // default YES
+@property (nonatomic, assign) NSInteger rippleOffset;       // default 3
+@property (nonatomic, assign) CGFloat rippleAmplitude;      // default 20 (degrees)
+@property (nonatomic, assign) CGFloat rippleDuration;       // default 0.75 seconds
+@property (nonatomic, assign) BOOL ripplesOnAccelerometer;  // default NO
+@property (nonatomic, assign) CGFloat rippleDelay;          // default 0.1f
 
 - (void)registerContentViewClass:(Class)contentViewClass;
 - (void)reloadData;
 - (NSArray *)visibleViews;
 - (UIView *)viewForIndex:(NSInteger)index;
 
+// animate individual cells
 - (void)bounceView:(UIView *)view;
 - (void)bounceView:(UIView *)view amplitude:(CGFloat)amplitude;
 - (void)bounceView:(UIView *)view amplitude:(CGFloat)amplitude duration:(CGFloat)duration;
 
+// animate ripple effect
 - (void)rippleAtOrigin:(NSInteger)originIndex;
 - (void)rippleAtOrigin:(NSInteger)originIndex amplitude:(CGFloat)amplitude;
 - (void)rippleAtOrigin:(NSInteger)originIndex amplitude:(CGFloat)amplitude duration:(CGFloat)duration;

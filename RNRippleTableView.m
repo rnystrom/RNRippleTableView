@@ -12,10 +12,6 @@
 
 #define DEGREES(rads) rads * M_PI / 180.f
 
-// For anti aliasing, set the UIViewEdgeAntialiasing key to YES in Info.plist
-// http://stackoverflow.com/a/8222717/940936
-// http://developer.apple.com/library/ios/#documentation/general/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html
-
 CGFloat const kRNRippleViewCellDefaultHeight = 40;
 
 static const void *kRNRippleTableViewParentShadowKey = &kRNRippleTableViewParentShadowKey;
@@ -70,6 +66,7 @@ static void tableInit(RNRippleTableView *self) {
     self->_rippleAmplitude = 20;
     self->_rippleDuration = 0.75f;
     self->_rippleOffset = 3;
+    self->_rippleDelay = 0.1f;
     
     self.bounces = YES;
     self.alwaysBounceHorizontal = NO;
@@ -213,6 +210,7 @@ static void tableInit(RNRippleTableView *self) {
 }
 
 - (void)registerContentViewClass:(Class)contentViewClass {
+    NSAssert([contentViewClass isSubclassOfClass:[UIView class]], @"Cannot register a class that does not inherit from UIView.");
     self.contentViewClass = contentViewClass;
 }
 
@@ -358,7 +356,7 @@ static void tableInit(RNRippleTableView *self) {
     
     [self bounceView:originView];
     
-    CGFloat delay = 0.1f;
+    CGFloat delay = self.rippleDelay;
     NSMutableArray *viewGroups = [NSMutableArray array];
     NSArray *visibleViews = [self visibleViews];
     
