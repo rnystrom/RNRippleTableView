@@ -267,7 +267,7 @@ static void tableInit(RNRippleTableView *self) {
     [path moveToPoint:CGPointZero];
     [path addLineToPoint:CGPointMake(self.bounds.size.width, 0)];
     [path addLineToPoint:CGPointMake(self.bounds.size.width * (1 - view.layer.anchorPoint.x), maxHeight * modifier)];
-    return path.CGPath;
+    return CGPathRetain(path.CGPath);
 }
 
 #pragma mark - Gestures
@@ -327,6 +327,7 @@ static void tableInit(RNRippleTableView *self) {
     }
     bounceKeyframe.values = bounceValues;
     
+    view.parentShadowLayer.path = [self parentShadowPathForView:view withModifier:0];
     [view.layer setValue:@(0) forKeyPath:bounceKeyframe.keyPath];
     [view.layer addAnimation:bounceKeyframe forKey:nil];
     
@@ -339,9 +340,6 @@ static void tableInit(RNRippleTableView *self) {
     shadowPathKeyframe.keyPath = @"path";
     
     NSMutableArray *pathValues = [NSMutableArray array];
-    if (view.parentShadowLayer.path == NULL) {
-        view.parentShadowLayer.path = [self parentShadowPathForView:view withModifier:0];
-    }
     CGPathRef initialPath = view.parentShadowLayer.path;
     for (NSInteger i = 0; i < bouncesCount; i++) {
         CGPathRef path = initialPath;
