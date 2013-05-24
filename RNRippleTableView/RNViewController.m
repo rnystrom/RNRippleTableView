@@ -19,9 +19,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor colorWithRed:117/255.f green:184/255.f blue:174/255.f alpha:1];
+    self.rippleView.ripplesOnShake = YES;
     [self.rippleView registerContentViewClass:[RNSampleCell class]];
     self.rippleView.delegate = self;
     self.rippleView.dataSource = self;
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self.rippleView becomeFirstResponder];
 }
 
 #pragma mark - Tableview datasource

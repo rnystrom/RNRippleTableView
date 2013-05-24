@@ -56,6 +56,8 @@ static const void *kRNRippleTableViewShadingLayerKey = &kRNRippleTableViewShadin
 
 @implementation RNRippleTableView
 
+#pragma mark - UIView
+
 static void tableInit(RNRippleTableView *self) {
     self->_tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGesture:)];
     [self addGestureRecognizer:self->_tapGesture];
@@ -94,6 +96,10 @@ static void tableInit(RNRippleTableView *self) {
         tableInit(self);
     }
     return self;
+}
+
+- (BOOL)canBecomeFirstResponder {
+    return self.ripplesOnShake;
 }
 
 #pragma mark - Table view
@@ -279,6 +285,14 @@ static void tableInit(RNRippleTableView *self) {
     }
 }
 
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+    [super motionEnded:motion withEvent:event];
+    
+    if (event.subtype == UIEventSubtypeMotionShake && self.ripplesOnShake) {
+        [self rippleAtOrigin:[[self visibleRows] firstIndex] amplitude:5 duration:0.05f];
+    }
+}
+
 #pragma mark - Cell animation
 
 - (void)bounceView:(UIView *)view {
@@ -354,7 +368,7 @@ static void tableInit(RNRippleTableView *self) {
 - (void)rippleAtOrigin:(NSInteger)originIndex amplitude:(CGFloat)amplitude duration:(CGFloat)duration {
     UIView *originView = [self viewForIndex:originIndex];
     
-    [self bounceView:originView];
+    [self bounceView:originView amplitude:amplitude];
     
     CGFloat delay = self.rippleDelay;
     NSMutableArray *viewGroups = [NSMutableArray array];
@@ -383,9 +397,9 @@ static void tableInit(RNRippleTableView *self) {
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, delay * (idx + 1) * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
             CGFloat modifier = 1 / (1.f * idx + 1);
             modifier = powf(modifier, idx);
-            CGFloat amplitude = 20 * modifier;
+            CGFloat subAmplitude = amplitude * modifier;
             for (UIView *view in viewGroup) {
-                [self bounceView:view amplitude:amplitude];
+                [self bounceView:view amplitude:subAmplitude];
             }
         });
     }];

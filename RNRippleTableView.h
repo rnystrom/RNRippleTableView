@@ -31,7 +31,7 @@
 @property (nonatomic, assign) NSInteger rippleOffset;       // default 3
 @property (nonatomic, assign) CGFloat rippleAmplitude;      // default 20 (degrees)
 @property (nonatomic, assign) CGFloat rippleDuration;       // default 0.75 seconds
-@property (nonatomic, assign) BOOL ripplesOnAccelerometer;  // default NO
+@property (nonatomic, assign) BOOL ripplesOnShake;          // default NO
 @property (nonatomic, assign) CGFloat rippleDelay;          // default 0.1f
 
 - (void)registerContentViewClass:(Class)contentViewClass;

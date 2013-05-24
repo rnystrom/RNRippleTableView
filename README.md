@@ -21,7 +21,16 @@ The preferred method of installation is through [CocoaPods](http://cocoapods.org
 pod 'RNRippleTableView', '~> 0.0.1'
 ```
 
-Or if you want to install manually, drag both <code>RNRippleTableView</code>'s .h and .m into your project. You'll need to ensure that the <code>QuartzCore</code> framework is included. Optionally, you'll need to include the MOTION FRAMEWORK if you'd like to use the accelerometer options.
+Or if you want to install manually, drag both <code>RNRippleTableView</code>'s .h and .m into your project. You'll need to ensure that the <code>QuartzCore</code> framework is included. 
+
+Optionally, you'll need to add the following code to any view controllers using <code>RNRippleTableView</code> to have ripple animations on shake gestures.
+
+```objc
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self.rippleView becomeFirstResponder];
+}
+```
 
 ## Usage ##
 
@@ -50,34 +59,40 @@ Setup your cells just like you would with <code>[UITableView]()</code> except wi
 <code>RNRippleTableView</code> comes with a small set of options to customize the appearance and animations. 
 
 ```objc
-@property (nonatomic, assign) BOOL isAnchoredLeft;          // default YES
+@property (nonatomic, assign) BOOL isAnchoredLeft; // default YES
 ```
 
 Determines the anchor point for cells. Also determines which side of the view is animated as well as the direction that the shadow is drawn.
 
 ```objc
-@property (nonatomic, assign) NSInteger rippleOffset;       // default 3
+@property (nonatomic, assign) NSInteger rippleOffset; // default 3
 ```
 
 The number of adjacent cells that are rippled.
 
 ```objc
-@property (nonatomic, assign) CGFloat rippleAmplitude;      // default 20 (degrees)
+@property (nonatomic, assign) CGFloat rippleAmplitude; // default 20 (degrees)
 ```
 
 The angle at which the epicenter of the ripple animates its rotation to in degrees.
 
 ```objc
-@property (nonatomic, assign) CGFloat rippleDuration;       // default 0.75 seconds
+@property (nonatomic, assign) CGFloat rippleDuration; // default 0.75 seconds
 ```
 
 The time for a single bounce animation to complete in seconds.
 
 ```objc
-@property (nonatomic, assign) BOOL ripplesOnAccelerometer;  // default NO
+@property (nonatomic, assign) CGFloat rippleDelay; // default 0.1f
 ```
 
-Optionally you can animate small ripples on significant motion events with the device. This was a fun feature I added just because.
+The timing delay between bounce animations in seconds that gives the entire ripple animation its delay effect. Faster looks more like a burst while slower looks like water.
+
+```objc
+@property (nonatomic, assign) BOOL ripplesOnShake; // default NO
+```
+
+Optionally you can animate small ripples on shake gestures with the device. This was a fun feature I added just because.
 
 ## Acknowledgments
 
