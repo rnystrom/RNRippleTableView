@@ -69,6 +69,7 @@ static void tableInit(RNRippleTableView *self) {
     self->_rippleDuration = 0.75f;
     self->_rippleOffset = 3;
     self->_rippleDelay = 0.1f;
+    self->_rippleEnabled = YES;
     
     self.bounces = YES;
     self.alwaysBounceHorizontal = NO;
@@ -279,6 +280,10 @@ static void tableInit(RNRippleTableView *self) {
             NSArray *rowObjects = [self.rowObjects filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"cachedView = %@",view]];
             RNRowObject *rowObject = [rowObjects lastObject];
             if (rowObject) {
+                if (self.rippleEnabled) {
+                    [self rippleAtOrigin:rowObject.index];
+                }
+                
                 [self.delegate tableView:self didSelectView:view atIndex:rowObject.index];
             }
         }
@@ -303,7 +308,7 @@ static void tableInit(RNRippleTableView *self) {
     [self bounceView:view amplitude:amplitude duration:self.rippleDuration];
 }
 
-- (void)bounceView:(UIView *)view amplitude:(CGFloat)amplitude duration:(CGFloat)duration {
+- (void)bounceView:(UIView *)view amplitude:(CGFloat)amplitude duration:(CGFloat)duration {    
     CGFloat m34 = 1 / 300.f * (view.layer.anchorPoint.x == 0 ? -1 : 1);
     CGFloat bounceAngleModifiers[] = {1, 0.33f, 0.13f};
     NSInteger bouncesCount = sizeof(bounceAngleModifiers) / sizeof(CGFloat);
@@ -380,7 +385,7 @@ static void tableInit(RNRippleTableView *self) {
                 [viewGroup addObject:view];
             }
         }
-        if (originIndex - 1 < [self.dataSource numberOfItemsInTableView:self]) {
+        if (originIndex + 1 < [self.dataSource numberOfItemsInTableView:self]) {
             UIView *view = [self viewForIndex:originIndex + i];
             if (view && [visibleViews containsObject:view]) {
                 [viewGroup addObject:view];

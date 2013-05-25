@@ -27,6 +27,7 @@
 @property (nonatomic, weak) id <RNRippleTableViewDataSource> dataSource;
 @property (nonatomic, weak) id <RNRippleTableViewDelegate> delegate;
 
+@property (nonatomic, assign) BOOL rippleEnabled;           // default YES
 @property (nonatomic, assign) BOOL isAnchoredLeft;          // default YES
 @property (nonatomic, assign) NSInteger rippleOffset;       // default 3
 @property (nonatomic, assign) CGFloat rippleAmplitude;      // default 20 (degrees)

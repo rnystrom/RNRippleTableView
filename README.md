@@ -59,6 +59,12 @@ Setup your cells just like you would with <code>[UITableView]()</code> except wi
 <code>RNRippleTableView</code> comes with a small set of options to customize the appearance and animations. 
 
 ```objc
+@property (nonatomic, assign) BOOL rippleEnabled; // default YES
+```
+
+Toggle rippling on and off.
+
+```objc
 @property (nonatomic, assign) BOOL isAnchoredLeft; // default YES
 ```
 
@@ -94,12 +100,15 @@ The timing delay between bounce animations in seconds that gives the entire ripp
 
 Optionally you can animate small ripples on shake gestures with the device. This was a fun feature I added just because.
 
-## Acknowledgments
+## Credits
 
 I created a parent project called <code>[RNTableView](https://github.com/rnystrom/RNTableView)</code> simply as a bare-minimum project for starting highly customized UITableView-esque classes. That project was entirely insprired by Mike Ash's [Let's Build UITableView](http://www.mikeash.com/pyblog/friday-qa-2013-02-22-lets-build-uitableview.html) blog post.
 
 [Boris Valusek](http://dribbble.com/BorisValusek) was the creator behind this idea on [Dribbble](http://dribbble.com/). All credit for originality goes to him.
 
+## Apps
+
+If you've used this project in a live app, please <a href="mailTo:rnystrom@whoisryannystrom.com">let me know</a>! Nothing makes me happier than seeing someone else take my work and go wild with it. 
 ## Contact
 
 * [@nystrorm](https://twitter.com/_ryannystrom) on Twitter

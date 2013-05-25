@@ -33,7 +33,7 @@
 #pragma mark - Tableview datasource
 
 - (NSInteger)numberOfItemsInTableView:(RNRippleTableView *)tableView {
-    return 10000;
+    return 10;
 }
 
 - (UIView *)viewForTableView:(RNRippleTableView *)tableView atIndex:(NSInteger)index withReuseView:(RNSampleCell *)reuseView {
@@ -54,7 +54,7 @@
 }
 
 - (void)tableView:(RNRippleTableView *)tableView didSelectView:(UIView *)view atIndex:(NSInteger)index {
-    [tableView rippleAtOrigin:index];
+    NSLog(@"Row %i tapped",index);
 }
 
 @end
