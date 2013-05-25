@@ -96,13 +96,13 @@ Optionally you can animate small ripples on shake gestures with the device. This
 
 ## Acknowledgments
 
-I created a parent project called <code>[RNTableView](https://github.com/rnystrom/RNTableView)</code> simply as a bear-minimum project for starting highly customized UITableView-esque classes. That project was entirely insprired by Mike Ash's [Let's Build UITableView](http://www.mikeash.com/pyblog/friday-qa-2013-02-22-lets-build-uitableview.html) blog post.
+I created a parent project called <code>[RNTableView](https://github.com/rnystrom/RNTableView)</code> simply as a bare-minimum project for starting highly customized UITableView-esque classes. That project was entirely insprired by Mike Ash's [Let's Build UITableView](http://www.mikeash.com/pyblog/friday-qa-2013-02-22-lets-build-uitableview.html) blog post.
 
 [Boris Valusek](http://dribbble.com/BorisValusek) was the creator behind this idea on [Dribbble](http://dribbble.com/). All credit for originality goes to him.
 
 ## Contact
 
-* [@nystrorm](https://twitter.com/nystrorm) on Twitter
+* [@nystrorm](https://twitter.com/_ryannystrom) on Twitter
 * [@rnystrom](https://github.com/rnystrom) on Github
 * <a href="mailTo:rnystrom@whoisryannystrom.com">rnystrom [at] whoisryannystrom [dot] com</a>
 
