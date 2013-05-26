@@ -18,7 +18,7 @@ To enable [Anti-Aliasing](http://en.wikipedia.org/wiki/Spatial_anti-aliasing) yo
 The preferred method of installation is through [CocoaPods](http://cocoapods.org/). Just add the following to your Podfile:
 
 ```
-pod 'RNRippleTableView', '~> 0.0.1'
+pod 'RNRippleTableView', '~> 0.0.2'
 ```
 
 Or if you want to install manually, drag both <code>RNRippleTableView</code>'s .h and .m into your project. You'll need to ensure that the <code>QuartzCore</code> framework is included. 
