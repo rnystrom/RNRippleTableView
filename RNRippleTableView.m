@@ -385,7 +385,7 @@ static void tableInit(RNRippleTableView *self) {
                 [viewGroup addObject:view];
             }
         }
-        if (originIndex + 1 < [self.dataSource numberOfItemsInTableView:self]) {
+        if (originIndex + i < [self.dataSource numberOfItemsInTableView:self]) {
             UIView *view = [self viewForIndex:originIndex + i];
             if (view && [visibleViews containsObject:view]) {
                 [viewGroup addObject:view];
