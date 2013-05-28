@@ -34,6 +34,8 @@
 @property (nonatomic, assign) CGFloat rippleDuration;       // default 0.75 seconds
 @property (nonatomic, assign) BOOL ripplesOnShake;          // default NO
 @property (nonatomic, assign) CGFloat rippleDelay;          // default 0.1f
+@property (nonatomic, assign) BOOL rippleHasParentShading;  // default YES
+@property (nonatomic, assign) BOOL rippleHasShading;        // default YES
 
 - (void)registerContentViewClass:(Class)contentViewClass;
 - (void)reloadData;

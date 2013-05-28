@@ -70,6 +70,8 @@ static void tableInit(RNRippleTableView *self) {
     self->_rippleOffset = 3;
     self->_rippleDelay = 0.1f;
     self->_rippleEnabled = YES;
+    self->_rippleHasParentShading = YES;
+    self->_rippleHasShading = YES;
     
     self.bounces = YES;
     self.alwaysBounceHorizontal = NO;
@@ -110,16 +112,16 @@ static void tableInit(RNRippleTableView *self) {
     if (! view) {
         view = [[self.contentViewClass alloc] init];
         
+        view.shadingLayer = [CALayer layer];
+        view.shadingLayer.backgroundColor = [UIColor colorWithWhite:0 alpha:0.13f].CGColor;
+        view.shadingLayer.opacity = 0;
+        [view.layer addSublayer:view.shadingLayer];
+        
         view.parentShadowLayer = [CAShapeLayer layer];
         view.parentShadowLayer.fillColor = [UIColor colorWithWhite:0 alpha:0.5f].CGColor;
         view.parentShadowLayer.fillRule = kCAFillRuleNonZero;
         view.parentShadowLayer.opacity = 1;
         [view.layer addSublayer:view.parentShadowLayer];
-        
-        view.shadingLayer = [CALayer layer];
-        view.shadingLayer.backgroundColor = [UIColor colorWithWhite:0 alpha:0.13f].CGColor;
-        view.shadingLayer.opacity = 0;
-        [view.layer addSublayer:view.shadingLayer];
     }
     else {
         [self.reusePool removeObject:view];
@@ -162,6 +164,7 @@ static void tableInit(RNRippleTableView *self) {
             [self setCachedView:view forIndex:rowToDisplay];
             view.layer.anchorPoint = CGPointMake(_isAnchoredLeft ? 0 : 1, 0.5f);
             view.frame = CGRectMake(0, yOrigin, self.bounds.size.width, rowHeight);
+            view.shadingLayer.frame = view.bounds;
             [self insertSubview:view atIndex:0];
         }
         rowToDisplay++;
@@ -338,24 +341,30 @@ static void tableInit(RNRippleTableView *self) {
     
     CAKeyframeAnimation *shadowKeyframe = [bounceKeyframe copy];
     shadowKeyframe.keyPath = @"opacity";
-    [view.shadingLayer addAnimation:shadowKeyframe forKey:nil];
-    [view.parentShadowLayer addAnimation:shadowKeyframe forKey:nil];
     
-    CAKeyframeAnimation *shadowPathKeyframe = [bounceKeyframe copy];
-    shadowPathKeyframe.keyPath = @"path";
-    
-    NSMutableArray *pathValues = [NSMutableArray array];
-    CGPathRef initialPath = view.parentShadowLayer.path;
-    for (NSInteger i = 0; i < bouncesCount; i++) {
-        CGPathRef path = initialPath;
-        if (i % 2 > 0) {
-            CGFloat modifier = bounceAngleModifiers[i / 2];
-            path = [self parentShadowPathForView:view withModifier:modifier];
-        }
-        [pathValues addObject:(__bridge id)path];
+    if (self.rippleHasShading) {
+        [view.shadingLayer addAnimation:shadowKeyframe forKey:nil];
     }
-    shadowPathKeyframe.values = pathValues;
-    [view.parentShadowLayer addAnimation:shadowPathKeyframe forKey:nil];
+    
+    if (self.rippleHasParentShading) {
+        [view.parentShadowLayer addAnimation:shadowKeyframe forKey:nil];
+        
+        CAKeyframeAnimation *shadowPathKeyframe = [bounceKeyframe copy];
+        shadowPathKeyframe.keyPath = @"path";
+        
+        NSMutableArray *pathValues = [NSMutableArray array];
+        CGPathRef initialPath = view.parentShadowLayer.path;
+        for (NSInteger i = 0; i < bouncesCount; i++) {
+            CGPathRef path = initialPath;
+            if (i % 2 > 0) {
+                CGFloat modifier = bounceAngleModifiers[i / 2];
+                path = [self parentShadowPathForView:view withModifier:modifier];
+            }
+            [pathValues addObject:(__bridge id)path];
+        }
+        shadowPathKeyframe.values = pathValues;
+        [view.parentShadowLayer addAnimation:shadowPathKeyframe forKey:nil];
+    }
 }
 
 #pragma mark - Table animation

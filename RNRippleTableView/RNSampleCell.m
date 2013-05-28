@@ -24,13 +24,6 @@
     return self;
 }
 
-- (id)init {
-    if (self = [super init]) {
-        [self _init];
-    }
-    return self;
-}
-
 - (void)_init {
     _titleLabel = [[UILabel alloc] init];
     _titleLabel.backgroundColor = [UIColor clearColor];

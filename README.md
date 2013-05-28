@@ -95,6 +95,18 @@ The time for a single bounce animation to complete in seconds.
 The timing delay between bounce animations in seconds that gives the entire ripple animation its delay effect. Faster looks more like a burst while slower looks like water.
 
 ```objc
+@property (nonatomic, assign) BOOL rippleHasParentShading; // default YES
+```
+
+Determines if the previous view casts a shadow on the animated view.
+
+```objc
+@property (nonatomic, assign) BOOL rippleHasShading; // default YES
+```
+
+Determines if the entire view is shaded as it bounces.
+
+```objc
 @property (nonatomic, assign) BOOL ripplesOnShake; // default NO
 ```
 

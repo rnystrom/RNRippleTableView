@@ -33,7 +33,7 @@
 #pragma mark - Tableview datasource
 
 - (NSInteger)numberOfItemsInTableView:(RNRippleTableView *)tableView {
-    return 10;
+    return 10000;
 }
 
 - (UIView *)viewForTableView:(RNRippleTableView *)tableView atIndex:(NSInteger)index withReuseView:(RNSampleCell *)reuseView {
