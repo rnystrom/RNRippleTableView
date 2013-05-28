@@ -154,7 +154,7 @@ static void tableInit(RNRippleTableView *self) {
     NSMutableIndexSet *newVisibleRows = [NSMutableIndexSet indexSet];
     CGFloat yOrigin;
     CGFloat rowHeight;
-    do {
+    while (yOrigin + rowHeight < endY && rowToDisplay < [self.rowObjects count]) {
         [newVisibleRows addIndex:rowToDisplay];
         yOrigin = [self startPositionYForIndex:rowToDisplay];
         rowHeight = [self heightForIndex:rowToDisplay];
@@ -168,7 +168,7 @@ static void tableInit(RNRippleTableView *self) {
             [self insertSubview:view atIndex:0];
         }
         rowToDisplay++;
-    } while (yOrigin + rowHeight < endY && rowToDisplay < [self.rowObjects count]);
+    }
     [self returnNonVisibleRowsToThePool:newVisibleRows];
 }
 
@@ -251,7 +251,10 @@ static void tableInit(RNRippleTableView *self) {
 }
 
 - (NSArray *)visibleViews {
-    return [[self.rowObjects objectsAtIndexes:self.visibleRows] valueForKeyPath:@"cachedView"];
+    if ([self.rowObjects count] > 0) {
+        return [[self.rowObjects objectsAtIndexes:self.visibleRows] valueForKeyPath:@"cachedView"];
+    }
+    return nil;
 }
 
 - (UIView *)viewAtPoint:(CGPoint)point {

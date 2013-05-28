@@ -33,12 +33,12 @@
 #pragma mark - Tableview datasource
 
 - (NSInteger)numberOfItemsInTableView:(RNRippleTableView *)tableView {
-    return 10000;
+    return 10;
 }
 
 - (UIView *)viewForTableView:(RNRippleTableView *)tableView atIndex:(NSInteger)index withReuseView:(RNSampleCell *)reuseView {
     reuseView.backgroundColor = [UIColor colorWithRed:117/255.f green:184/255.f blue:174/255.f alpha:1];
-    reuseView.titleLabel.text = [NSString stringWithFormat:@"Cell %i",index];
+    reuseView.titleLabel.text = [NSString stringWithFormat:@"Cell %i",index+1];
     reuseView.titleLabel.textColor = [UIColor whiteColor];
     reuseView.titleLabel.font = [UIFont boldSystemFontOfSize:17];
     reuseView.titleLabel.shadowColor = [UIColor colorWithWhite:0 alpha:0.1f];
