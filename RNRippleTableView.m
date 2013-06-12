@@ -148,17 +148,13 @@ static void tableInit(RNRippleTableView *self) {
 }
 
 - (void)layoutTableView {
-    if ([self.rowObjects count] == 0) {
-        return;
-    }
-    
     CGFloat startY = self.contentOffset.y;
     CGFloat endY = startY + self.frame.size.height;
     NSInteger rowToDisplay = [self findRowForOffsetY:startY inRange:NSMakeRange(0, [self.rowObjects count])];
     NSMutableIndexSet *newVisibleRows = [NSMutableIndexSet indexSet];
     CGFloat yOrigin;
     CGFloat rowHeight;
-    do {
+    while (yOrigin + rowHeight < endY && rowToDisplay < [self.rowObjects count]) {
         [newVisibleRows addIndex:rowToDisplay];
         yOrigin = [self startPositionYForIndex:rowToDisplay];
         rowHeight = [self heightForIndex:rowToDisplay];
@@ -172,7 +168,7 @@ static void tableInit(RNRippleTableView *self) {
             [self insertSubview:view atIndex:0];
         }
         rowToDisplay++;
-    } while (yOrigin + rowHeight < endY && rowToDisplay < [self.rowObjects count]);
+    }
     [self returnNonVisibleRowsToThePool:newVisibleRows];
 }
 
