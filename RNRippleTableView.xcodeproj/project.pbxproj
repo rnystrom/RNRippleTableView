@@ -1,0 +1,324 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		863838BD174E7EC2007DB88D /* RNAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 863838B6174E7EC2007DB88D /* RNAppDelegate.m */; };
+		863838BF174E7EC2007DB88D /* RNSampleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 863838BA174E7EC2007DB88D /* RNSampleCell.m */; };
+		863838C0174E7EC2007DB88D /* RNViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 863838BC174E7EC2007DB88D /* RNViewController.m */; };
+		863838C5174E7ED9007DB88D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 863838C1174E7ED9007DB88D /* Default-568h@2x.png */; };
+		863838C6174E7ED9007DB88D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 863838C2174E7ED9007DB88D /* Default.png */; };
+		863838C7174E7ED9007DB88D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 863838C3174E7ED9007DB88D /* Default@2x.png */; };
+		863838C8174E7ED9007DB88D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 863838C4174E7ED9007DB88D /* main.m */; };
+		863838CD174E7EE0007DB88D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 863838C9174E7EE0007DB88D /* InfoPlist.strings */; };
+		863838CE174E7EE0007DB88D /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 863838CB174E7EE0007DB88D /* MainStoryboard.storyboard */; };
+		8679945C174A9328008D1D4C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8679945B174A9328008D1D4C /* UIKit.framework */; };
+		8679945E174A9328008D1D4C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8679945D174A9328008D1D4C /* Foundation.framework */; };
+		86799460174A9328008D1D4C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8679945F174A9328008D1D4C /* CoreGraphics.framework */; };
+		86799480174A9346008D1D4C /* RNRippleTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8679947F174A9346008D1D4C /* RNRippleTableView.m */; };
+		86799485174A947C008D1D4C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86799484174A947C008D1D4C /* QuartzCore.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		863838B5174E7EC2007DB88D /* RNAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNAppDelegate.h; path = RNRippleTableView/RNAppDelegate.h; sourceTree = SOURCE_ROOT; };
+		863838B6174E7EC2007DB88D /* RNAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNAppDelegate.m; path = RNRippleTableView/RNAppDelegate.m; sourceTree = SOURCE_ROOT; };
+		863838B7174E7EC2007DB88D /* RNRippleTableView-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "RNRippleTableView-Info.plist"; path = "RNRippleTableView/RNRippleTableView-Info.plist"; sourceTree = SOURCE_ROOT; };
+		863838B8174E7EC2007DB88D /* RNRippleTableView-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "RNRippleTableView-Prefix.pch"; path = "RNRippleTableView/RNRippleTableView-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		863838B9174E7EC2007DB88D /* RNSampleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNSampleCell.h; path = RNRippleTableView/RNSampleCell.h; sourceTree = SOURCE_ROOT; };
+		863838BA174E7EC2007DB88D /* RNSampleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNSampleCell.m; path = RNRippleTableView/RNSampleCell.m; sourceTree = SOURCE_ROOT; };
+		863838BB174E7EC2007DB88D /* RNViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNViewController.h; path = RNRippleTableView/RNViewController.h; sourceTree = SOURCE_ROOT; };
+		863838BC174E7EC2007DB88D /* RNViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNViewController.m; path = RNRippleTableView/RNViewController.m; sourceTree = SOURCE_ROOT; };
+		863838C1174E7ED9007DB88D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "RNRippleTableView/Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
+		863838C2174E7ED9007DB88D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = RNRippleTableView/Default.png; sourceTree = SOURCE_ROOT; };
+		863838C3174E7ED9007DB88D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "RNRippleTableView/Default@2x.png"; sourceTree = SOURCE_ROOT; };
+		863838C4174E7ED9007DB88D /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = RNRippleTableView/main.m; sourceTree = SOURCE_ROOT; };
+		863838CA174E7EE0007DB88D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = RNRippleTableView/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
+		863838CC174E7EE0007DB88D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = RNRippleTableView/en.lproj/MainStoryboard.storyboard; sourceTree = SOURCE_ROOT; };
+		86799458174A9328008D1D4C /* RNRippleTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RNRippleTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8679945B174A9328008D1D4C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8679945D174A9328008D1D4C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8679945F174A9328008D1D4C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8679947E174A9346008D1D4C /* RNRippleTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNRippleTableView.h; sourceTree = "<group>"; };
+		8679947F174A9346008D1D4C /* RNRippleTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNRippleTableView.m; sourceTree = "<group>"; };
+		86799484174A947C008D1D4C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		86799455174A9328008D1D4C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86799485174A947C008D1D4C /* QuartzCore.framework in Frameworks */,
+				8679945C174A9328008D1D4C /* UIKit.framework in Frameworks */,
+				8679945E174A9328008D1D4C /* Foundation.framework in Frameworks */,
+				86799460174A9328008D1D4C /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8679944F174A9328008D1D4C = {
+			isa = PBXGroup;
+			children = (
+				8679947E174A9346008D1D4C /* RNRippleTableView.h */,
+				8679947F174A9346008D1D4C /* RNRippleTableView.m */,
+				86799461174A9328008D1D4C /* RNRippleTableView */,
+				8679945A174A9328008D1D4C /* Frameworks */,
+				86799459174A9328008D1D4C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		86799459174A9328008D1D4C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				86799458174A9328008D1D4C /* RNRippleTableView.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8679945A174A9328008D1D4C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				86799484174A947C008D1D4C /* QuartzCore.framework */,
+				8679945B174A9328008D1D4C /* UIKit.framework */,
+				8679945D174A9328008D1D4C /* Foundation.framework */,
+				8679945F174A9328008D1D4C /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		86799461174A9328008D1D4C /* RNRippleTableView */ = {
+			isa = PBXGroup;
+			children = (
+				863838B9174E7EC2007DB88D /* RNSampleCell.h */,
+				863838BA174E7EC2007DB88D /* RNSampleCell.m */,
+				863838BB174E7EC2007DB88D /* RNViewController.h */,
+				863838BC174E7EC2007DB88D /* RNViewController.m */,
+				86799462174A9328008D1D4C /* Supporting Files */,
+			);
+			name = RNRippleTableView;
+			path = RNRipplingTableView;
+			sourceTree = "<group>";
+		};
+		86799462174A9328008D1D4C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				863838B5174E7EC2007DB88D /* RNAppDelegate.h */,
+				863838B6174E7EC2007DB88D /* RNAppDelegate.m */,
+				863838B7174E7EC2007DB88D /* RNRippleTableView-Info.plist */,
+				863838B8174E7EC2007DB88D /* RNRippleTableView-Prefix.pch */,
+				863838C9174E7EE0007DB88D /* InfoPlist.strings */,
+				863838CB174E7EE0007DB88D /* MainStoryboard.storyboard */,
+				863838C1174E7ED9007DB88D /* Default-568h@2x.png */,
+				863838C2174E7ED9007DB88D /* Default.png */,
+				863838C3174E7ED9007DB88D /* Default@2x.png */,
+				863838C4174E7ED9007DB88D /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		86799457174A9328008D1D4C /* RNRippleTableView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8679947B174A9328008D1D4C /* Build configuration list for PBXNativeTarget "RNRippleTableView" */;
+			buildPhases = (
+				86799454174A9328008D1D4C /* Sources */,
+				86799455174A9328008D1D4C /* Frameworks */,
+				86799456174A9328008D1D4C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RNRippleTableView;
+			productName = RNRipplingTableView;
+			productReference = 86799458174A9328008D1D4C /* RNRippleTableView.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		86799450174A9328008D1D4C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = RN;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Ryan Nystrom";
+			};
+			buildConfigurationList = 86799453174A9328008D1D4C /* Build configuration list for PBXProject "RNRippleTableView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8679944F174A9328008D1D4C;
+			productRefGroup = 86799459174A9328008D1D4C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				86799457174A9328008D1D4C /* RNRippleTableView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		86799456174A9328008D1D4C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				863838C5174E7ED9007DB88D /* Default-568h@2x.png in Resources */,
+				863838C6174E7ED9007DB88D /* Default.png in Resources */,
+				863838C7174E7ED9007DB88D /* Default@2x.png in Resources */,
+				863838CD174E7EE0007DB88D /* InfoPlist.strings in Resources */,
+				863838CE174E7EE0007DB88D /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		86799454174A9328008D1D4C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86799480174A9346008D1D4C /* RNRippleTableView.m in Sources */,
+				863838BD174E7EC2007DB88D /* RNAppDelegate.m in Sources */,
+				863838BF174E7EC2007DB88D /* RNSampleCell.m in Sources */,
+				863838C0174E7EC2007DB88D /* RNViewController.m in Sources */,
+				863838C8174E7ED9007DB88D /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		863838C9174E7EE0007DB88D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				863838CA174E7EE0007DB88D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		863838CB174E7EE0007DB88D /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				863838CC174E7EE0007DB88D /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		86799479174A9328008D1D4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8679947A174A9328008D1D4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8679947C174A9328008D1D4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RNRippleTableView/RNRippleTableView-Prefix.pch";
+				INFOPLIST_FILE = "RNRippleTableView/RNRippleTableView-Info.plist";
+				PRODUCT_NAME = RNRippleTableView;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8679947D174A9328008D1D4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RNRippleTableView/RNRippleTableView-Prefix.pch";
+				INFOPLIST_FILE = "RNRippleTableView/RNRippleTableView-Info.plist";
+				PRODUCT_NAME = RNRippleTableView;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		86799453174A9328008D1D4C /* Build configuration list for PBXProject "RNRippleTableView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86799479174A9328008D1D4C /* Debug */,
+				8679947A174A9328008D1D4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8679947B174A9328008D1D4C /* Build configuration list for PBXNativeTarget "RNRippleTableView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8679947C174A9328008D1D4C /* Debug */,
+				8679947D174A9328008D1D4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 86799450174A9328008D1D4C /* Project object */;
+}
